@@ -1,10 +1,21 @@
-# CreditRiskAnalysis
+# Credit_Risk_Analysis
+
+Regina Negrycz 
+genglist@yahoo.com 
+Module 17 Challenge 
+Submitted 22 Aug 2021 
+credit_risk_ensemble.ipynb
+credit_risk_resampling.ipynb
+Resources
+Images
+README
 
 ## Overview
 
-The aim of this project was to apply machine learning to solve credit card risk.
-The data was first analyzed using the RandomOverSampler and SMOTE algorithms, then analyzed using the CLusterCentroids algorithm and a combined oversampling and subsampling approach using the SMOTEENN algorithm.
-In order to predict credit risk, the two additional models, BalancedRandomForestClassifier and EasyEnsembleClassifier.
+The goal of this project was to apply machine learning to solve credit card risk. The data was first analyzed using the RandomOverSampler and SMOTE algorithms, then analyzed using the ClusterCentroids algorithm and a combined oversampling and subsampling approach using the SMOTEENN algorithm.
+
+Two additional models, BalancedRandomForestClassifier and EasyEnsembleClassifier were used to predict credit risk.
+
 The data was evaluated to classify the credit risk for individuals as "high risk" or "low risk".
 
 ## Results
@@ -15,47 +26,59 @@ balanced accuracy score,
 the accuracy score
 the recall score.
 
-1. Cluster Centroids
+1. RandomOverSampler
 
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/ClusterCentroids.png?raw=true)
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/ClusterCentroids1.png?raw=true)
+Accuracy:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/Random_Accuracy.PNG
 
-2.EasyEnsemble
+Classification:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/Random_Classification.PNG
 
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/EasyEnsemble.png?raw=true)
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/EasyEnsemble1.png?raw=true)
+2. SMOTE
 
-3.Naive Random
+Accuracy:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/SMOTE_Accuracy.PNG
 
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/Naive.png?raw=true)
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/Naive1.png?raw=true)
-
-4.Smote
-
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/SMOTE.png?raw=true)
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/SMOTE1.png?raw=true)
-
-5.Random Balance
-
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/Random.png?raw=true)
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/Random1.png?raw=true)
+Classification:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/SMOTE_Classification.PNG
 
 
+3. ClusterCentroids
+Accuracy: https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/ClusterCentroids_Accuracy.PNG
 
-6.PRED
+Classification: 
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/ClusterCentroids_Classification.PNG
 
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/PRED.png?raw=true)
-![alt text](https://github.com/valeria100719/CreditRiskAnalysis/blob/main/Images/PRED4.png?raw=true)
+4. SMOTEENN
 
-Summary
+Accuracy:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/SMOTEENN_Accuracy.PNG
 
-Of the six machine learning models evaluated, the best would appear to be Easy Ensemble AdaBoost Classifier.
+Classification:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/SMOTEENN_Classification.PNG
 
-Easy Ensemble AdaBoost classifier proved: balanced accuracy score = 0.93,
 
-the mean accuracy score = 0.99
+5. BalancedRandomForest
 
-the mean recall score = 0.94.
+Accuracy:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/BalancedRandomForest_Accuracy.PNG
 
-It showed the best score over the others.
+Classification:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/BalancedRandomForest_Classification.PNG
+
+
+6.EasyEnsemble
+
+Accuracy:
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/EasyEnsemble_Accuracy.PNG
+
+Classification:
+
+https://github.com/genlgist/Credit_Risk_Analysis/blob/main/Images/EasyEnsemble_Classification.PNG
+
+
+## Summary
+
+Of the six machine learning models evaluated, the best appears to be EasyEnsembleClassifier.  This algorithm proved a balanced accuracy score = 0.93, a mean accuracy score = 0.99, and a mean recall score = 0.94. It showed the best score over the models.
+
 The disadvantage of using these models is that the accuracy scores of the high_risk prediction are significantly lower than the accuracy scores of the low_risk prediction which could potentially cause errors in the overall accuracy of the credit card risk assessment.
